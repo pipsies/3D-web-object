@@ -1,0 +1,19 @@
+:root {
+  --background-color: hsl(0, 0%, 0%);
+  --text-color: hsl(0, 0%, 89%);
+}
+
+body {
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+body h1 {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 2.8125em;
+}
+
+#colorbtn {
+  background-color: aquamarine;
+  margin-left: 3.125em;
+}/*# sourceMappingURL=bodylayout.css.map */

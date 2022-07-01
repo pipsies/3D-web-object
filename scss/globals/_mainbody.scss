@@ -1,0 +1,16 @@
+@use '../util/' as u;
+
+body {
+    background-color: var(--background-color);
+    overflow: hidden;
+    h1{
+        text-align: center;
+        color: var(--text-color);
+        font-size: u.em(45);
+    }
+}
+
+#colorbtn {
+    background-color: aquamarine;
+    margin-left: u.em(50);
+}

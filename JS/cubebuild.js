@@ -18,7 +18,7 @@ const box = new THREE.Mesh(geobox, meshmat);
 scene.add(box);
 camera.position.z = 5;
 
-
+// animation 
 function frame() {
 
     requestAnimationFrame(frame);

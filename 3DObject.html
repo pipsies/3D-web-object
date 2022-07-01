@@ -3,13 +3,22 @@
 
     <head>
         <title>3D Object Rendering</title>
-        <link rel="stylesheet" href="object.css" >
+        <link rel="stylesheet" href="./css/object.css">
+        <script type="module" src="./JS/three.js"></script>
+        <script type="module" src="./JS/GLTFLoader.js"></script>
     </head>
 <body>
 
 
-<script type="module">
+<header>
+    <h1>Three.js Rendering 3D Objects</h1>
+</header>
 
+
+
+
+
+<script type="module">
     //creating scene 
     const scene = new THREE.Scene();
     //creating camera, FOV * aspect ratio and how far & near the object is
@@ -40,8 +49,6 @@ function frame() {
     renderer.render(scene, camera)
 }
 frame();
-
-
 </script>
 
 

@@ -14,13 +14,11 @@
 
 
 <header>
-    <h1>3D Objects</h1>
-    <p>rendering 3D models with three.js</p>
+    <h1>3D Object using Three.js</h1>
+    <p>example of rendering 3D objects on a web browser</p>
 </header>
 
-<button id="colorbtn" colorswitch();>
-    Change my color!
-</button>
+
 
 
 
@@ -49,8 +47,8 @@ function frame() {
 
     requestAnimationFrame(frame);
     //adding cube rotation
-    box.rotation.x += 0.01;
-    box.rotation.y += 0.01;
+    box.rotation.x += 0.02;
+    box.rotation.y += 0.02;
     //rendering scene and camera variables
     renderer.render(scene, camera)
 }

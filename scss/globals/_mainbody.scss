@@ -1,12 +1,12 @@
 @use '../util/' as u;
 
 body {
-    background-color: var(--background-color);
+    background-color: black;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
     h1 {
         text-align: center;
-        color: var(--text-color);
+        color: var(--header-color);
         font-size: u.em(45);
         margin: 0;
     }
@@ -25,4 +25,8 @@ body {
     border-radius: u.em(4);
     border-style: none;
   
+}
+
+canvas {
+    background-color: var(--background-color);
 }

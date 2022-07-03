@@ -6,15 +6,19 @@
         <link rel="stylesheet" href="./dist/bodylayout.css">
         <script type="module" src="./JS/three.js"></script>
         <script type="module" src="./JS/GLTFLoader.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
     </head>
 <body>
 
 
 <header>
-    <h1>Rendering objects with Three.js</h1>
+    <h1>3D Objects</h1>
+    <p>rendering 3D models with three.js</p>
 </header>
 
-<button id="colorbtn">
+<button id="colorbtn" colorswitch();>
     Change my color!
 </button>
 
@@ -51,6 +55,10 @@ function frame() {
     renderer.render(scene, camera)
 }
 frame();
+
+
+
+
 </script>
 
 

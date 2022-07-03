@@ -6,14 +6,24 @@
 body {
   background-color: var(--background-color);
   overflow: hidden;
+  font-family: "Roboto", sans-serif;
 }
 body h1 {
   text-align: center;
   color: var(--text-color);
   font-size: 2.8125em;
+  margin: 0;
+}
+body p {
+  font-size: 0.9375em;
+  text-align: center;
+  color: var(--text-color);
 }
 
 #colorbtn {
-  background-color: aquamarine;
+  background-color: hsl(266deg, 52%, 70%);
   margin-left: 3.125em;
+  font-family: "Roboto", sans-serif;
+  border-radius: 0.25em;
+  border-style: none;
 }/*# sourceMappingURL=bodylayout.css.map */

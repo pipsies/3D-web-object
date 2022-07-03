@@ -3,14 +3,26 @@
 body {
     background-color: var(--background-color);
     overflow: hidden;
-    h1{
+    font-family: 'Roboto', sans-serif;
+    h1 {
         text-align: center;
         color: var(--text-color);
         font-size: u.em(45);
+        margin: 0;
+    }
+
+    p{
+        font-size: u.em(15);
+        text-align: center;
+        color: var(--text-color);
     }
 }
 
 #colorbtn {
-    background-color: aquamarine;
+    background-color: hsl(266, 52%, 70%);
     margin-left: u.em(50);
+    font-family: 'Roboto', sans-serif;
+    border-radius: u.em(4);
+    border-style: none;
+  
 }

@@ -13,52 +13,49 @@
 <body>
 
 
-<header>
-    <h1>3D Object using Three.js</h1>
-    <p>example of rendering 3D objects on a web browser</p>
-</header>
+<canvas id="matilda">
 
-
-
-
+</canvas>
 
 <script type="module">
-    //creating scene 
-    const scene = new THREE.Scene();
-    //creating camera, FOV * aspect ratio and how far & near the object is
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    // rendering the scene w cam using WebGL
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, innerHeight);
+
+    import { GLTFLoader } from "./JS/GLTFLoader.js";
+    // RENDERERs
+    const renderer = new THREE.WebGLRenderer({canvas: document.getElementById('matilda'), antialias: false});
+    //background color
+    renderer.setClearColor(0xFFFFC0CB);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    //set size of render/canvas in doc
+    renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
     
-// creating the box
-const geobox = new THREE.BoxGeometry(1, 1, 1);
-//creating material to give color attribute of green 
-const meshmat = new THREE.MeshBasicMaterial({color: 0xFFC298E2});
-// takes the geo& assigns the mesh to it for scene
-const box = new THREE.Mesh(geobox, meshmat);
-//cam&box will be added together
-scene.add(box);
-camera.position.z = 5;
-
-
-function frame() {
-
-    requestAnimationFrame(frame);
-    //adding cube rotation
-    box.rotation.x += 0.02;
-    box.rotation.y += 0.02;
-    //rendering scene and camera variables
-    renderer.render(scene, camera)
-}
-frame();
-
-
-
-
-</script>
-
+    //rendering camera distance near & far FOV, aspect ratio
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 4000);
+    
+        //LOADER
+        const loader = new GLTFLoader();
+        //loading object new    
+        var object;
+        loader.load( 'matilda/scene.gltf', function(gltf) {
+        object = gltf.scene
+        scene.add(gltf.scene);
+    });
+    
+    
+    //SCENE
+    const scene = new THREE.Scene();
+    // adding light to scene and intesity 
+    const light1 = new THREE.AmbientLight(0xffffff, 1)
+    scene.add(light1);
+    //camera positioning to view object near / far
+    camera.position.set(10, 80, 420);
+    function animate() {
+        requestAnimationFrame(animate);
+       if(object) object.rotation.y += 0.001
+        renderer.render(scene, camera);
+    }
+    animate();
+    </script>
 
 
 

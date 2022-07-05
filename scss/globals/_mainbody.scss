@@ -1,12 +1,12 @@
 @use '../util/' as u;
 
 body {
-    background-color: black;
+    background-color: aqua;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
     h1 {
         text-align: center;
-        color: var(--header-color);
+       
         font-size: u.em(45);
         margin: 0;
     }
@@ -19,7 +19,7 @@ body {
 }
 
 #colorbtn {
-    background-color: hsl(266, 52%, 70%);
+    background-color:  var(--background-color);
     margin-left: u.em(50);
     font-family: 'Roboto', sans-serif;
     border-radius: u.em(4);
